@@ -13,10 +13,26 @@
     </Window.DataContext>
     
     <Grid>
-        <TextBlock Text="{Binding Clicks}"
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="{Binding Clicks}"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="40"
                    Foreground="White"/>
+            <StackPanel Orientation="Horizontal"
+                        Margin="20"
+                        HorizontalAlignment="Center">
+                <Button Command="{Binding ClickAdd}"
+                    Content="+"
+                    Width="100"
+                    Margin="0,0,0,0"
+                    FontSize="25"/>
+                <Button Command="{Binding ClickRemove}"
+                    Content="-"
+                    Width="100"
+                    Margin="20,0,0,0"
+                    FontSize="25"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

@@ -5,6 +5,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using System.Windows.Media.Animation;
+using WikiScrapper.Core;
 
 namespace WikiScrapper.MVVM.ViewModel
 {
@@ -29,16 +32,29 @@ namespace WikiScrapper.MVVM.ViewModel
             }
         }
 
-        public MainWindowViewModel()
+        public ICommand ClickAdd
         {
-            Task.Factory.StartNew(() =>
+            get
             {
-                while (true)
+                return new DelegateCommand((obj) =>
                 {
-                    Task.Delay(1000).Wait();
                     Clicks++;
-                }
-            });
+                });
+            }
+        }
+
+        public ICommand ClickRemove
+        {
+            get
+            {
+                return new DelegateCommand((obj) =>
+                {
+                    if (Clicks > 0)
+                    {
+                        Clicks--;
+                    }
+                });
+            }
         }
     }
 }
