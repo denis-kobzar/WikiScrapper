@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:WikiScrapper"
              StartupUri="View/Base/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/Component/NavigationItem.xaml"/>
+                <ResourceDictionary Source="Theme/Component/SearchBox.xaml"/>
+                <ResourceDictionary Source="Theme/Component/ParseButton.xaml"/>
+                <ResourceDictionary Source="Theme/Component/TextViewer.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

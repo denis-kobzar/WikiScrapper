@@ -8,10 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
+    <Folder Include="Core\" />
     <Folder Include="Services\" />
-    <Folder Include="ViewModel\Base\" />
-    <Folder Include="View\" />
   </ItemGroup>
 
 </Project>
