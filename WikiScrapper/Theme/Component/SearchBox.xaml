@@ -19,33 +19,15 @@
                                      Background="Transparent"
                                      TextWrapping="Wrap"
                                      BorderThickness="0"
-                                     Foreground="Gray"
-                                     CaretBrush="Gray"
+                                     Foreground="White"
+                                     CaretBrush="White"
                                      Margin="8,0,0,0"
-                                     Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                     Text="{TemplateBinding Text}"
+                                     FontSize="14">
                                 <TextBox.InputBindings>
                                     <KeyBinding Command="{Binding StartParsing}" Key="Return"/>
                                 </TextBox.InputBindings>
                             </TextBox>
-
-                            <TextBlock IsHitTestVisible="False"
-                                       Text="Search querry"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Margin="10,0,0,0"
-                                       Foreground="DarkGray">
-                                
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock">
-                                        <Setter Property="Visibility" Value="Collapsed"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
-                                                <Setter Property="Visibility" Value="Visible"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>    
-                                </TextBlock.Style>
-                            </TextBlock>
                         </Grid>
                         
                     </Border>
